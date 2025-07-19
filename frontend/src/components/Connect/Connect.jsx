@@ -10,12 +10,13 @@ const Connect = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      'service_hl29hzv',     
-      'template_a2fj29i',    
-      form.current,
-      'D4GFAJzB2x1z2bDs5'     
-    )
+  emailjs.sendForm(
+  import.meta.env.VITE_SERVICE_ID,
+  import.meta.env.VITE_TEMPLATE_ID,
+  form.current,
+  import.meta.env.VITE_PUBLIC_KEY
+)
+
     .then((result) => {
         console.log('Email sent successfully:', result.text);
         alert('Thank you! Your message has been sent.');
