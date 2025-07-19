@@ -10,7 +10,6 @@ const skills = [
   { name: "JavaScript", icon: <FaJs color="#f0db4f" /> },
   { name: "ReactJS", icon: <FaReact color="#61dafb" /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss color="#38bdf8" /> },
-  { name: "Bootstrap", icon: <SiBootstrap color="#7952b3" /> },
   { name: "HTML", icon: <FaHtml5 color="#e34c26" /> },
   { name: "CSS", icon: <FaCss3Alt color="#264de4" /> },
   { name: "NodeJS", icon: <FaNodeJs color="#68a063" /> },
@@ -19,9 +18,6 @@ const skills = [
   { name: "MySQL", icon: <SiMysql color="#00758f" /> },
   { name: "Git", icon: <FaGitAlt color="#f1502f" /> },
   { name: "GitHub", icon: <FaGitAlt color="#fff" /> },
-  { name: "Firebase", icon: <SiFirebase color="#FFCA28" /> },
-  { name: "Postman", icon: <SiPostman color="#FF6C37" /> },
-  { name: "Render", icon: <SiRender color="#46e3b7" /> },
   { name: "Vercel", icon: <SiVercel color="#fff" /> },
 ];
 
