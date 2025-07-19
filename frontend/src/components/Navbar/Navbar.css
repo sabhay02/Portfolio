@@ -1,0 +1,168 @@
+/* Navbar base styles */
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #0e0e0e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.logo .highlight {
+  color: #fff;
+}
+
+.logo .dot {
+  color: #d12ee0; /* pink dot */
+  margin-left: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #d12ee0; /* pink accent */
+  border-radius: 50%;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  transform: translateX(-50%) scale(1);
+}
+
+/* Connect With Me button styled as link */
+.connect-btn {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: linear-gradient(90deg, #d12ee0, #f17822);
+  border: none;
+  border-radius: 2rem;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;   /* remove underline */
+  transition: transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.connect-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 1.6rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* ✅ Responsive: tablets */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+  }
+
+  .connect-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px; /* below navbar */
+    right: 0;
+    width: 100%;
+    background-color: #0e0e0e;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+  }
+
+  .connect-btn {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+  }
+}
+
+/* ✅ Responsive: mobile */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.8rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .connect-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.9rem;
+  }
+}
